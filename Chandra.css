@@ -1,9 +1,9 @@
 
-.t {
+.t{
 	-webkit-animation: tracking-in-contract-bck-top 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
 	        animation: tracking-in-contract-bck-top 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
 font-size: 56px;
-    color: #19c49c;
+    color: #7AE2CF;
     font-family: Times New Roman;
    font-style: italic;
     text-shadow: 0px 0px 0 rgb(-58,113,73),
@@ -196,7 +196,7 @@ font-size: 56px;
 
   body{
 
-    background: darkslategray;
+    background: #27445D;
 
     margin: center;
 
@@ -211,7 +211,7 @@ font-size: 56px;
 
  padding: 1px;
    border-radius: 15px;
- background: skyblue;
+ background: #B6B09F;
 
  border: 2px solid darkblue;
 
@@ -240,7 +240,7 @@ font-size: 56px;
  height: 700px;
   margin-left: 200px;
    border-radius: 30px;
- background: palevioletred;
+ background: #000000;
 
  border: 2px solid darkblue;
 }
@@ -344,12 +344,10 @@ font-size: 56px;
   background: grey;
 }
 .loginbtn{
-  position: center;
-
+	position: center;
   margin-left: 200px;
   margin-top: 120px;
  width: 200px;
-
  height: 60px;
   padding-top: 1px;
   padding-left: 10px;
@@ -368,4 +366,127 @@ font-size: 56px;
   margin-bottom : 1px;
   font-size : 25px;
   color : chartreuse;
-      }
+}
+
+/* ----------------------------------------------
+ * This below code is for OsPage.html
+
+ * ----------------------------------------
+ */
+.oshead{
+	margin-left: 100px;
+	-webkit-animation: tracking-in-contract-bck-top 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+	        animation: tracking-in-contract-bck-top 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+font-size: 56px;
+    color: #7AE2CF;
+    font-family: Times New Roman;
+   font-style: italic;
+    text-shadow: 0px 0px 0 rgb(-58,113,73),
+                 0px 1px 0 rgb(-92,79,39),
+                 0px 2px 0 rgb(-127,44,4),
+                 0px 3px 0 rgb(-162,9,0),
+                 0px 4px 0 rgb(-197,-26,0),
+                 0px 5px 0 rgb(-231,-60,0),
+                 0px 6px 0 rgb(-266,-95,0),
+                 0px 7px  0 rgb(-301,-130,0),
+                 0px 8px 7px rgba(16,23,12,0.96),
+                 0px 8px 1px rgba(16,23,12,0.5),
+                 0px 0px 7px rgba(16,23,12,.2);
+ }
+.search{
+	font-size: 20px;
+  position: center;
+
+ width: 700px;
+
+ height: 60px;
+  padding-top: 8px;
+  padding-left: 10px;
+   border-radius: 25px;
+  margin-left : 150px;
+  margin-top: 80px;
+ background: gold;
+
+ border: 1px solid darkblue;
+}
+.item_names{
+  width : 515px;
+  height: 40px;
+  margin-left: 20px;
+  background: paleturquoise;
+	font-size: 16px;
+	font-family: Times New Roman;
+   font-style: italic;
+	text-decoration-color: green;
+}
+.search_btn{
+	position: center;
+  margin-left : 10px;
+  margin-top: 9px;
+ width: 70px;
+ height: 40px;
+  padding-top: 1px;
+  padding-left: 1px;
+   border-radius: 25px;
+ background: darkcyan;
+
+ border: 2px solid green;
+}
+.products{
+	width: 950px;
+	border-radius: 15px;
+	border: 2px solid green;
+	background-color: teal;
+	backface-visibility: 20%;
+	padding: 10px;
+	margin-top: 30px;
+}
+img{
+	width : 310px;
+	height : 340px;
+	border-radius: 20px;
+}
+.prize{
+	text-align: center;
+	font-size: 30px;
+	font-family: Times New Roman;
+   font-style: italic;
+	margin-left: 10px;
+}
+td{
+	width: 310px;
+	height: 400px;
+	background: goldenrod;
+}
+.add_to_cart{
+	height: 50px;
+	width: 100px;
+	border-radius: 20px;
+	background: darkcyan;
+	
+}
+.Uct{
+	margin-left: 750px;
+	padding-bottom: 1px;
+	height: 200px;
+	width: 200px;
+	border-radius: 200px;
+	font-size: 30px;
+	background: darkblue;
+}
+
+
+#vouncher{
+	text-align: center;
+	font-family: "Lucida Console", "Courier New", monospace;
+	font-size: 60px;
+}
+shadowbox.{
+	background: green;
+	width: 50px;
+	height: 70%;
+  border: 1px solid;
+  padding: 10px;
+  box-shadow: 5px 10px 18px #888888;
+	  }
+	  
