@@ -1,59 +1,191 @@
- 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
- <title>Title</title>
- <h1 class="t" align="center">Chandra Onlineshop</h1>
- <link rel="stylesheet" href="Chandra.css">
+  <meta charset="UTF-8">
+  <title>Slide Page Example</title>
+  <link rel="stylesheet"href="/storage/emulated/0/Chandra.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    /* Main page content */
+    .main-content {
+      padding: 20px;
+    }
+
+    /* Slide-in page */
+    .slide-page {
+      position: fixed;
+      font-size: 20px;
+      font-weight: 900;
+      font-family: "Lucida Console", "Courier New", monospace;
+      top: 0;
+      right: -100%;
+      width: 80%;
+      height: 80%;
+      background-color: white;
+      box-shadow: -2px 0 5px rgba(0,0,0,0.2);
+      transition: right 0.4s ease;
+      z-index: 1000;
+      padding: 20px;
+      border: 1px solid;
+      box-shadow: 5px 10px 18px #888888;
+    }
+
+    .slide-page.active {
+      right: 0;
+    }
+
+    .close-btn {
+      height: 90px;
+	width: 90px;
+	border-radius: 90px;
+	background: red;
+      font-size: 60px;
+      
+    }
+  </style>
+  
 </head>
 <body>
- <img class="logo" src="p2.jpg">
- <div id="box">
- <div id="ball"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="50" fill="currentColor" class="bi bi-bag-heart-fill" viewBox="0 0 16 16">
+
+  <div class="main-content">
+    <h1 class="oshead">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bag-heart-fill" viewBox="0 0 16 16">
   <path d="M11.5 4v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4zM8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m0 6.993c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132"/>
- </svg><svg xmlns="http://www.w3.org/2000/svg" width="16" height="50" fill="currentColor" class="bi bi-bag-heart-fill" viewBox="0 0 16 16">
+</svg>Welcome To Chandra Os
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bag-heart-fill" viewBox="0 0 16 16">
   <path d="M11.5 4v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4zM8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m0 6.993c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132"/>
- </svg><svg xmlns="http://www.w3.org/2000/svg" width="16" height="50" fill="currentColor" class="bi bi-bag-heart-fill" viewBox="0 0 16 16">
-  <path d="M11.5 4v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4zM8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m0 6.993c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132"/>
- </svg>
- </div>
- </div><br><br><br>
-<script>
- let ball = document.querySelector("#ball")
- 
- let left = 0
- let direction = "right"
- setInterval(() => {
- if(direction === "right") {
- left += 1
- if(left > 898) direction = "left"
- } else {
- left -= 1
- if(left < 1) direction = "right"
- }
- ball.style.left = `${left}px`
- }, 10)
+</svg></h1>
+  <div class="search">
+   <label><b>Search</b></label><input class="item_names" type="text"><input class="search_btn" type="submit">
+  </div>
+  
+  
+  
+  
+  <div class="products">
+    <table>
+    <tr class="tr1">
+    
+      <td>
+      <div class="11">
+        <img src="apple.jpg">
+        <label class="prize">5000 Ks</label><button class="add_to_cart"onclick="addToCart('Green Apple', 5000)">Add To Cart</button>
+      </div> 
+      </td>
+      <td>
+      <div class="12">
+        <img src="swim.jpg">
+        <label class="prize">9000 Ks</label><button class="add_to_cart"onclick="addToCart('Swim suit', 9000)">Add To Cart</button>
+      </div> 
+      </td>
+      <td>
+      <div class="13">
+        <img src="phone.jpg">
+        <label class="prize">173000 Ks</label><button class="add_to_cart"onclick="addToCart('Note 13 pro', 3000)">Add To Cart</button>
+      
+      </div> 
+      </td>
+    </div>
+    </tr>
+    
+    <!--This part is Table Row 2 codes-->
+      
+    <tr class="tr2">
+    <div class="r2">
+      <!--This part is Row 2 colum 1-->
+      <td>
+      <div class="R21">
+        <img src="noodle.jpg">
+        <label class="prize">5500 Ks</label><button class="add_to_cart"onclick="addToCart('Spicy Noodle', 5500)">Add To Cart</button>
+      </div> 
+      </td>
+      <!--This part is Row 2 colum 2-->
+      <td>
+      <div class="22">
+        <img src="camera.jpg">
+        <label class="prize">430000 Ks</label><button class="add_to_cart"onclick="addToCart('Canva Camera', 430009)">Add To Cart</button>
+      </div> 
+      </td>
+      <!--This part is Row 2 colum 3-->
+      <td>
+      <div class="23">
+        <img src="shoes.jpg">
+    <label class="prize">40000 Ks</label><button class="add_to_cart"onclick="addToCart('Sport shoes', 4300p)">Add To Cart</button>
+      </div>
+      </td>
+    </tr>
+      <!--This part is Table Row 3 codes-->
+    </table> 
+
+  <button class="Uct"onclick="openSlidePage()">
+  <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" fill="currentColor"
+    class="bi bi-cart" viewBox="0 0 16 16">
+    <path d="M0 1a1 1 0 0 1 1-1h1.11a.5.5 0 0 1 .485.379L3.89 3H14a.5.5 0 0 1 .49.598l-1.5 8A.5.5 0 0 1 12.5 12H4a.5.5 0 0 1-.49-.402L1.61 1.607 1.11 0H1a1 1 0 0 1-1-1zM4.415 4l1.75 7h6.682l1.2-6.4H4.415z"/>
+    <circle cx="6" cy="13" r="1"/>
+    <circle cx="11" cy="13" r="1"/>
+  </svg>
+</button>
+    </div>
+    <!--This part is Vouncher codes-->
+    
+  <div class="slide-page" id="slidePage">
+
+     <button class="close-btn" onclick="closeSlidePage()">X</button>
+    <h2 id="vouncher">Chandra Onlineshop</h2>
+    <p>Date/Time</p><p id="currentDateTime"></p>
+
+    <ol id="cart"></ol>
+    <script>
+  const cart = {};
+
+  function addToCart(productName, price) {
+    if (!cart[productName]) {
+      cart[productName] = { quantity: 0, price: 0, unitPrice: price };
+    }
+    cart[productName].quantity += 1;
+    cart[productName].price = cart[productName].quantity * price;
+
+    updateCart();
+  }
+
+  function updateCart() {
+    const cartElement = document.getElementById('cart');
+    cartElement.innerHTML = ''; // Clear existing items
+    let total = 0;
+
+    for (const [name, data] of Object.entries(cart)) {
+      const item = document.createElement('li');
+      item.textContent = `${name}- Quantity: ${data.quantity} - Total Price: MMK${data.price.toFixed(2)}Ks`;
+      cartElement.appendChild(item);
+      total += data.price;
+    }
+
+    // Add total of all products
+    const totalItem = document.createElement('li');
+    totalItem.style.fontWeight = 'bold';
+    totalItem.textContent = `Total Cost:MMK${total.toFixed(2)} Ks`;
+    cartElement.appendChild(totalItem);
+  }
+    const now = new Date();
+  document.getElementById("currentDateTime").innerHTML = now.toLocaleString();
 </script>
- <div class="form">
-  <h1 class="login">Log In</h1>
-  <div class="lock">
-   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-lock" viewBox="0 0 16 16">
-  <path fill-rule="evenodd" d="M8 0a4 4 0 0 1 4 4v2.05a2.5 2.5 0 0 1 2 2.45v5a2.5 2.5 0 0 1-2.5 2.5h-7A2.5 2.5 0 0 1 2 13.5v-5a2.5 2.5 0 0 1 2-2.45V4a4 4 0 0 1 4-4M4.5 7A1.5 1.5 0 0 0 3 8.5v5A1.5 1.5 0 0 0 4.5 15h7a1.5 1.5 0 0 0 1.5-1.5v-5A1.5 1.5 0 0 0 11.5 7zM8 1a3 3 0 0 0-3 3v2h6V4a3 3 0 0 0-3-3"/>
-</svg>
+
   </div>
-  <div class="uname">
-   <label><b>Username</b></label><input class="usr" type="text">
+
+  <script>
+    function openSlidePage() {
+      document.getElementById('slidePage').classList.add('active');
+    }
+
+    function closeSlidePage() {
+      document.getElementById('slidePage').classList.remove('active');
+    }
+  </script>
+
   </div>
-  <div class="password">
-   <label><b>Password</b></label><input class="pass" type="password">
-  </div>
-  <input class="loginbtn"type="submit">
-  <p class="contact">To contact Us__<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-telephone-outbound" viewBox="0 0 16 16">
-  <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.6 17.6 0 0 0 4.168 6.608 17.6 17.6 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.68.68 0 0 0-.58-.122l-2.19.547a1.75 1.75 0 0 1-1.657-.459L5.482 8.062a1.75 1.75 0 0 1-.46-1.657l.548-2.19a.68.68 0 0 0-.122-.58zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877zM11 .5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V1.707l-4.146 4.147a.5.5 0 0 1-.708-.708L14.293 1H11.5a.5.5 0 0 1-.5-.5"/>
-</svg>_09-684255123</p>
- </div>
- <p class="ads" align="center">
-  <b>Web Designed </b>by <i>La Min Myat.</i>The owner of @Chandra Onlineshop.
-  </p>
+
 </body>
 </html>
